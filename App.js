@@ -1,3 +1,4 @@
+
 const fetchData = async () => {
   const result = await fetch(
     "https://content.newtonschool.co/v1/pr/64e3d1b73321338e9f18e1a1/inshortsnews"
