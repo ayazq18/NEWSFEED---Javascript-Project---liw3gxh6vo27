@@ -1,4 +1,3 @@
-
 const fetchData = async () => {
   const result = await fetch(
     "https://content.newtonschool.co/v1/pr/64e3d1b73321338e9f18e1a1/inshortsnews"
@@ -93,6 +92,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 //saveNews
+const savedNews = document.getElementById('savedNews')
 const savedNewsList = getNewsFromLocalStorage();
   savedNewsList.map((news) => {
     const newDiv = document.createElement("div");
@@ -118,5 +118,5 @@ const savedNewsList = getNewsFromLocalStorage();
   });
 
   document.querySelector(".new-icon").addEventListener('click', ()=>{
-    window.location.href = 'newNews.html'
-  })
+      window.location.href = 'newNews.html'
+    })

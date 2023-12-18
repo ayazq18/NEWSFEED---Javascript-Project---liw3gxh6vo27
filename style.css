@@ -29,7 +29,9 @@ body{
 }
 
 .dashboard-feed-access{
-    background-color: black;
+    background-image: url(news.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 20px;
     margin: 10px;
     border-radius: 20px;
@@ -109,11 +111,18 @@ body{
 /* newNews */
 
 .newNews-sec{
-    background-color: black;
+    background-image: url(news.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: black; */
     margin: 10px;
-    border-radius: 20px;
-    padding: 25px;
-    position: relative;
+    /* border-radius: 20px; */
+    padding: 30px;
+    position:sticky;
+    display: block;
+    left: 30px;
+    top: 0px;
+    z-index: 9;
 }
 
 .newNews-heading a{
@@ -150,11 +159,16 @@ body{
 .flop-save{
     text-decoration: none;
     font-size: 40px;
-    color: #cadefc;
+    color: #ffff;
     position: absolute;
-    right: 50px;
+    right: 0px;
     top: 10px;
     margin: 40px 50px 40px 40px;
+    cursor: pointer;
+}
+
+.flop-save:hover{
+    transform: scale(1.1);
 }
 
 #category{
@@ -287,6 +301,29 @@ body{
     z-index: 1;
 }
 
-/* .svd{
+.svd{
     display: none;
+}
+
+
+
+.typewriter {
+    overflow: hidden;
+    border-right: 1px solid blue;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation:
+        typing 3.5s steps(20, start),
+        blink-caret .75s step-end 5s;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 70% }
+}
+
+/* @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
 } */
