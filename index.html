@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="icon" href="1f304.svg" type="image/x-icon">
+    <title>NewsFeed</title>
 </head>
 <body>
     <div class="newsFeed-logo">
@@ -16,8 +18,8 @@
         <div class="dashboard-feed-access">
             <h1>my newsfeed</h1>
             <div id="dashboard-feed-btns">
-                <button id="loadSavedBtn">LOAD SAVED NEWS</button>
-                <button id="loadNewBtn">LOAD NEW NEWS</button>
+                <button id="loadSavedBtn"><a href="savedNews.html">LOAD SAVED NEWS</a></button>
+                <button id="loadNewBtn"><a href="newNews.html">LOAD NEW NEWS</a></button>
             </div>
         </div>
         <div class="dashboard-feed-updates">
@@ -26,12 +28,9 @@
         </div>
     </div>
 
-    <div id="newNews">
-        <div class="newNews-sec">
-            <h1>my newsfeed</h1>
-            <button id="">Saved News</button>
-        </div>
-    </div>
+
+   <!-- <div class="savedBtn svd"></div>
+   <div class="filterBtn svd"></div> -->
     <script src="App.js"></script>
 </body>
 </html>
