@@ -409,9 +409,8 @@ body{
     border-right: 1px;
     white-space: nowrap;
     margin: 0 auto;
-    letter-spacing: .15em;
     animation:
-        typing 3.5s steps(20, start)
+        typing 4s infinite steps(30, start)
 }
 
 @keyframes typing {
