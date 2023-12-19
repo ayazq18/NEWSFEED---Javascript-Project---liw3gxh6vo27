@@ -73,9 +73,20 @@ const renderNews = (data) => {
   });
 };
 
+const loadMoreNews = async ()=>{
+  const data = await fetchData();
+  renderNews(data)
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
     const data = await fetchData();
     renderNews(data);
+
+    window.addEventListener('scroll', ()=>{
+      if(window.innerHeight + window.scrollY >= document.body.offsetHeight){
+        loadMoreNews()
+      }
+    })
     const filterBtn = document.querySelectorAll(".filterBtn");
     filterBtn.forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -95,13 +106,14 @@ document.addEventListener("DOMContentLoaded", async () => {
       renderNews(data);
     });
 
-    document.querySelector(".floppy").addEventListener('click', ()=>{
+    document.querySelector(".flop-save").addEventListener('click', ()=>{
       window.location.href = 'savedNews.html'
     })
 });
 
 // }
 
+// savedNews
 // if(window.location.pathname.includes("savedNews.html")){
 //saveNews
 const savedNewsList = getNewsFromLocalStorage();
@@ -110,9 +122,9 @@ savedNews.innerHTML = ''
   savedNewsList.map((news) => {
     const newDiv = document.createElement("div");
     newDiv.innerHTML = `
-        <div class="newNews-content">
-          <div class="newAuthor-category">
-            <h2 id="new-author"><p>By</p> ${news.author}</h2>
+        <div class="savedNews-content">
+          <div class="savedAuthor-category">
+            <h2 id="saved-author"><p>By</p> ${news.author}</h2>
             <h2 id="new-author"><p>Category</p> ${news.category}</h2>
           </div>
           <div class="newNews-content-url">

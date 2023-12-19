@@ -132,6 +132,12 @@ body{
     100%{left: 0%;text-wrap: nowrap;}
 }
 
+.floating-heading a{
+    text-decoration:none;
+    font-weight:600;
+    color:blue;
+}
+
 
 /* newNews */
 
@@ -182,23 +188,6 @@ body{
     width: fit-content;
     padding: 5px 20px;
     margin:10px;
-}
-
-.flop-save{
-    text-decoration: none;
-    font-size: 40px;
-    background-color: #c3bef0;
-    padding: 10px;
-    border-radius: 5px;
-    color: #2b2626;
-    position: absolute;
-    right: 0px;
-    top: 10px;
-    margin: 40px 50px 40px 40px;
-    cursor: pointer;
-}
-.flop-save:hover{
-    transform: scale(1.1);
 }
 
 .section-container{
@@ -266,13 +255,28 @@ body{
 .category-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     width: 40rem;
     height: fit-content;
     background-color: #c3bef058;
     position:sticky;
     top: 200px;
+}
+.flop-save{
+    font-size: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    color:red;
+}
+.flop-save:hover{
+    transform: scale(1.1);
+}
+
+.select-category{
+    display: flex;
+    align-items:center;
+    gap:50px;
 }
 
 #category{
@@ -341,7 +345,7 @@ body{
 .savedNews-sec{
     background-color: black;
     margin: 10px;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     padding: 15px;
     display: flex;
     align-items: center;
@@ -419,4 +423,55 @@ body{
     50% { width: 50%; color: rgba(226, 24, 24, 0.729);}
     750% { width: 75%; color: rgba(19, 218, 115, 0.852);}
     100% { width: 100%; color: black;}
+}
+
+.savedNews-content{
+    background-color: #cca8e9;
+    margin: 0px 30px 10px 30px;
+    padding: 40px;
+    position: relative;
+    width: 60rem;
+}
+
+.savedAuthor-category{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    bottom: 25px;
+}
+
+#saved-author{
+    font-size: 20px;
+    display: flex;
+    gap: 5px;
+}
+#saved-author p{
+   font-weight: 400;
+}
+
+.savedNews-content-url{
+    display: flex;
+    gap: 2px;
+}
+
+.savedNews-content-url a{
+    text-decoration: none;
+    font-weight: 700;
+    color: blue;
+}
+
+.fa-heart{
+    font-size: 30px;
+    position: absolute;
+    right: 30px;
+    margin: 0 5px;
+}
+
+.transparent{
+    color: white;
+}
+
+#newNews{
+    margin: 0px;
 }
