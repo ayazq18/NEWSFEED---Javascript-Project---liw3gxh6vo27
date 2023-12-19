@@ -31,7 +31,7 @@ function removeNewsFromLocalStorage(newsName) {
 
 //newNews
 
-if (window.location.pathname.includes('newNews.html')) {
+// if (window.location.pathname.includes('newNews.html')) {
 const renderNews = (data) => {
   const newData = document.getElementById("newNews");
   newData.innerHTML = "";
@@ -100,9 +100,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     })
 });
 
-}
+// }
 
-if(window.location.pathname.includes("savedNews.html")){
+// if(window.location.pathname.includes("savedNews.html")){
 //saveNews
 const savedNewsList = getNewsFromLocalStorage();
 const savedNews = document.getElementById('savedNews')
@@ -133,4 +133,4 @@ savedNews.innerHTML = ''
   document.querySelector(".new-icon").addEventListener('click', ()=>{
     window.location.href = 'newNews.html'
   })
-}
+// }
