@@ -30,14 +30,17 @@ function removeNewsFromLocalStorage(newsName) {
 }
 
 //newNews
+
+if (window.location.pathname.includes('newNews.html')) {
 const renderNews = (data) => {
   const newData = document.getElementById("newNews");
   newData.innerHTML = "";
-
+  const getStoredData = getNewsFromLocalStorage()
   data.map((news) => {
     const newDiv = document.createElement("div");
     const { author, category, content, url } = news;
     newDiv.innerHTML += `
+        <div cladd="newNews-section">
           <div class = "newNews-content">
             <div class = "newAuthor-category">
                 <h2 id="new-author"><p>By</p> ${author}</h2>
@@ -49,16 +52,22 @@ const renderNews = (data) => {
             </div>
             <i class="fa fav-icon fa-regular fa-heart fa-2xl transparent"></i>
           </div>
+        </div>
           `;
     newData.appendChild(newDiv);
     const favIcon = newDiv.querySelector(".fa-heart");
+    
+    if (getStoredData.some((savedNews) => savedNews.author===news.author)) {
+      favIcon.classList.remove("transparent");
+    }
+
     favIcon.addEventListener("click", () => {
       if (favIcon.classList.contains("transparent")) {
         addNewsToLocalStorage(news);
-        favIcon.classList.toggle("transparent", false);
+        favIcon.classList.remove("transparent");
       } else {
         removeNewsFromLocalStorage(news);
-        favIcon.classList.toggle("transparent", true);
+        favIcon.classList.add("transparent");
       }
     });
   });
@@ -91,9 +100,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     })
 });
 
+}
+
+if(window.location.pathname.includes("savedNews.html")){
 //saveNews
-const savedNews = document.getElementById('savedNews')
 const savedNewsList = getNewsFromLocalStorage();
+const savedNews = document.getElementById('savedNews')
+savedNews.innerHTML = ''
   savedNewsList.map((news) => {
     const newDiv = document.createElement("div");
     newDiv.innerHTML = `
@@ -118,5 +131,6 @@ const savedNewsList = getNewsFromLocalStorage();
   });
 
   document.querySelector(".new-icon").addEventListener('click', ()=>{
-      window.location.href = 'newNews.html'
-    })
+    window.location.href = 'newNews.html'
+  })
+}

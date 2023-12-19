@@ -21,6 +21,7 @@ body{
 
 .newsFeed-logo h1{
     font-size: 7rem;
+    font-weight: 700;
     padding: 10px;
 }
 
@@ -105,18 +106,45 @@ body{
     padding: 20px;
 }
 
+.floating-heading{
+    background-color: rgb(181, 224, 241);
+    margin:0 10px;
+    padding: 20px;
+    position: sticky;
+    top: 150px;
+    overflow: hidden;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+}
 
+.floating-heading h2{
+    font-size: 15px;
+    font-weight: 400;
+    color: red;
+    width: fit-content;
+    animation: floating-heading 10s linear infinite;
+    position: absolute;
+}
+
+@keyframes floating-heading {
+    0%{left: 100%;text-wrap: nowrap;}
+    100%{left: 0%;text-wrap: nowrap;}
+}
 
 
 /* newNews */
+
+.newNews-section{
+    height: 300px;
+    overflow: auto;
+}
 
 .newNews-sec{
     background-image: url(news.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-color: black; */
     margin: 10px;
-    /* border-radius: 20px; */
     padding: 30px;
     position:sticky;
     display: block;
@@ -159,46 +187,35 @@ body{
 .flop-save{
     text-decoration: none;
     font-size: 40px;
-    color: #ffff;
+    background-color: #c3bef0;
+    padding: 10px;
+    border-radius: 5px;
+    color: #2b2626;
     position: absolute;
     right: 0px;
     top: 10px;
     margin: 40px 50px 40px 40px;
     cursor: pointer;
 }
-
 .flop-save:hover{
     transform: scale(1.1);
 }
 
-#category{
-    padding: 5px 10px;
-    margin: 8px;
-    background-color: #c3bef0;
-    border-radius: 8px;
-    font-weight: 800;
-    font-size: 25px;
-    cursor: pointer;
-}
-
-.subCategory{
-    margin: 0 8px;
-}
-.subCategory button{
-    padding: 5px 20px;
-    margin-right: 20px;
-    background-color: #c3bef0;
-    border-radius: 5px;
-    font-weight: 800;
-    font-size: 23px;
-    cursor: pointer;
+.section-container{
+    margin: 10px 10px;
+    display: flex;
+    justify-content: flex-start;
+    position: sticky;
+    top: 0px;
+    gap: 30px;
 }
 
 .newNews-content{
     background-color: #cca8e9;
-    margin: 15px 30px;
+    margin: 0px 30px 10px 30px;
     padding: 40px;
-    border-radius: 20px;
+    position: relative;
+    width: 60rem;
 }
 
 .newAuthor-category{
@@ -232,13 +249,91 @@ body{
 .fa-heart{
     font-size: 30px;
     position: absolute;
-    right: 50px;
+    right: 30px;
     margin: 0 5px;
-    z-index: 1;
 }
 
 .transparent{
     color: white;
+}
+
+#newNews{
+    margin: 0px;
+}
+
+/* category container */
+
+.category-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40rem;
+    height: fit-content;
+    background-color: #c3bef058;
+    position:sticky;
+    top: 200px;
+}
+
+#category{
+    padding: 5px 10px;
+    margin: 8px;
+    background-color: #c3bef0;
+    border: none;
+    font-weight: 800;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.subCategory{
+    width: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.subCategory button{
+    padding: 15px;
+    margin: 15px;
+    background-color: #c3bef0;
+    border: none;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(42, 36, 36, 0.921);
+    transition: box-shadow 1s ease;
+}
+
+.subCategory button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(248, 245, 245, 0.921);
+
+}
+
+#all{
+    background-color:chocolate;
+}
+#business{
+    background-color: yellow;
+}
+#sports{
+    background-color: green;
+}
+#india{
+    background-color: pink;
+}
+#hatke{
+    background-color: rgb(73, 73, 199);
+}
+#politics{
+    background-color: red;
+}
+#automobile{
+    background-color:darkgoldenrod;
+}
+#science{
+    background-color:fuchsia;
 }
 
 /* savedNews */
@@ -301,29 +396,28 @@ body{
     z-index: 1;
 }
 
+.new-icon:hover{
+    transform: scale(1.1);
+}
+
 .svd{
     display: none;
 }
 
-
-
 .typewriter {
     overflow: hidden;
-    border-right: 1px solid blue;
+    border-right: 1px;
     white-space: nowrap;
     margin: 0 auto;
     letter-spacing: .15em;
     animation:
-        typing 3.5s steps(20, start),
-        blink-caret .75s step-end 5s;
+        typing 3.5s steps(20, start)
 }
 
 @keyframes typing {
-    from { width: 0 }
-    to { width: 70% }
+    0% { width: 0; color: rgba(128, 128, 128, 0.153); }
+    25% { width: 25%; color: rgba(192, 201, 36, 0.775);}
+    50% { width: 50%; color: rgba(226, 24, 24, 0.729);}
+    750% { width: 75%; color: rgba(19, 218, 115, 0.852);}
+    100% { width: 100%; color: black;}
 }
-
-/* @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange; }
-} */
