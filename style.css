@@ -342,6 +342,20 @@ body{
 
 /* savedNews */
 
+.alertMessage{
+    font-size: 50px;
+    width:fit-content;
+    color:red;
+    padding:30px;
+    background-color: white;
+    opacity: .5;
+    box-shadow:0 4px 8px black;
+    position: sticky;
+    bottom:300px;
+    margin: 0 auto;
+    z-index: 111;
+}
+
 .savedNews-sec{
     background-color: black;
     margin: 10px;
@@ -427,10 +441,10 @@ body{
 
 .savedNews-content{
     background-color: #cca8e9;
-    margin: 0px 30px 10px 30px;
+    margin: 10px auto;
     padding: 40px;
     position: relative;
-    width: 60rem;
+    width: 90rem;
 }
 
 .savedAuthor-category{

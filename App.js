@@ -35,7 +35,7 @@ function removeNewsFromLocalStorage(newsName) {
 const renderNews = (data) => {
   const newData = document.getElementById("newNews");
   newData.innerHTML = "";
-  const getStoredData = getNewsFromLocalStorage()
+  const getStoredData = getNewsFromLocalStorage();
   data.map((news) => {
     const newDiv = document.createElement("div");
     const { author, category, content, url } = news;
@@ -56,8 +56,8 @@ const renderNews = (data) => {
           `;
     newData.appendChild(newDiv);
     const favIcon = newDiv.querySelector(".fa-heart");
-    
-    if (getStoredData.some((savedNews) => savedNews.author===news.author)) {
+
+    if (getStoredData.some((savedNews) => savedNews.author === news.author)) {
       favIcon.classList.remove("transparent");
     }
 
@@ -73,76 +73,82 @@ const renderNews = (data) => {
   });
 };
 
-const loadMoreNews = async ()=>{
-  const data = await fetchData();
-  renderNews(data)
-}
-
 document.addEventListener("DOMContentLoaded", async () => {
-    const data = await fetchData();
+  const data = await fetchData();
+  renderNews(data);
+
+  const filterBtn = document.querySelectorAll(".filterBtn");
+  filterBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const category = btn.id;
+      renderFilteredNews(category);
+    });
+  });
+  const renderFilteredNews = (category) => {
+    const filteredNews = data.filter(
+      (news) => news.category.toLowerCase() === category.toLowerCase()
+    );
+    renderNews(filteredNews);
+  };
+
+  const filterall = document.getElementById("all");
+  filterall.addEventListener("click", () => {
     renderNews(data);
+  });
 
-    window.addEventListener('scroll', ()=>{
-      if(window.innerHeight + window.scrollY >= document.body.offsetHeight){
-        loadMoreNews()
-      }
-    })
-    const filterBtn = document.querySelectorAll(".filterBtn");
-    filterBtn.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const category = btn.id;
-        renderFilteredNews(category);
-      });
-    });
-    const renderFilteredNews = (category) => {
-      const filteredNews = data.filter(
-        (news) => news.category.toLowerCase() === category.toLowerCase()
-      );
-      renderNews(filteredNews);
-    };
-
-    const filterall = document.getElementById("all");
-    filterall.addEventListener("click", () => {
-      renderNews(data);
-    });
-
-    document.querySelector(".flop-save").addEventListener('click', ()=>{
-      window.location.href = 'savedNews.html'
-    })
+  document.querySelector(".flop-save").addEventListener("click", () => {
+    window.location.href = "savedNews.html";
+  });
 });
 
 // }
 
 // savedNews
+
+const showNotification = (message) => {
+  const alertMessage = document.createElement("h1");
+  alertMessage.classList.add("alertMessage");
+  alertMessage.innerText = message;
+  alertMessage.style.display = "flex";
+  // newDiv.innerHTML = '';
+
+  document.body.appendChild(alertMessage);
+
+  setTimeout(() => {
+    alertMessage.style.display = "none";
+  }, 2000);
+};
 // if(window.location.pathname.includes("savedNews.html")){
 //saveNews
 const savedNewsList = getNewsFromLocalStorage();
-const savedNews = document.getElementById('savedNews')
-savedNews.innerHTML = ''
-  savedNewsList.map((news) => {
-    const newDiv = document.createElement("div");
-    newDiv.innerHTML = `
+const savedNews = document.getElementById("savedNews");
+savedNews.innerHTML = "";
+savedNewsList.map((news) => {
+  const { author, category, content, url } = news;
+  const newDiv = document.createElement("div");
+  newDiv.innerHTML = `
         <div class="savedNews-content">
           <div class="savedAuthor-category">
-            <h2 id="saved-author"><p>By</p> ${news.author}</h2>
-            <h2 id="new-author"><p>Category</p> ${news.category}</h2>
+            <h2 id="saved-author"><p>By</p> ${author}</h2>
+            <h2 id="saved-author"><p>Category</p> ${category}</h2>
           </div>
-          <div class="newNews-content-url">
-            <p id="new-content">${news.content}</p>
-            <a id="new-url" href="${news.url}">Read More.</a>
+          <div class="savedNews-content-url">
+            <p id="saved-content">${content}</p>
+            <a id="saved-url" href="${url}">Read More.</a>
           </div>
           <i class="fas fa-times-circle xmark"></i>
         </div>
       `;
-    savedNews.appendChild(newDiv);
-    const favIcon = newDiv.querySelector(".xmark");
-    favIcon.addEventListener("click", () => {
-      removeNewsFromLocalStorage(news);
-      newDiv.remove();
-    });
+  savedNews.appendChild(newDiv);
+  const favIcon = newDiv.querySelector(".xmark");
+  favIcon.addEventListener("click", () => {
+    removeNewsFromLocalStorage(news);
+    newDiv.remove();
+    showNotification("1 Saved News item removed");
   });
+});
 
-  document.querySelector(".new-icon").addEventListener('click', ()=>{
-    window.location.href = 'newNews.html'
-  })
+document.querySelector(".new-icon").addEventListener("click", () => {
+  window.location.href = "newNews.html";
+});
 // }
