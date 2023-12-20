@@ -34,7 +34,7 @@ const showNotification = (message) => {
   const alertMessage = document.createElement("h1");
   alertMessage.classList.add("alertMessage");
   alertMessage.innerText = message;
-  alertMessage.style.display = "flex";
+  alertMessage.style.display = "block";
 
   document.body.appendChild(alertMessage);
 
@@ -45,9 +45,9 @@ const showNotification = (message) => {
 
 //saveNews
 const savedNewsList = getNewsFromLocalStorage();
-if(savedNewsList){
 const savedNews = document.getElementById("savedNews");
 savedNews.innerHTML = "";
+if(savedNewsList !== null && savedNewsList.length>0){
 savedNewsList.map((news) => {
   const { author, category, content, url } = news;
   const newDiv = document.createElement("div");
@@ -72,10 +72,14 @@ savedNewsList.map((news) => {
     showNotification("1 Saved News item removed");
   });
 });
+}else {
+  const emptyElement = document.getElementById("empty");
 
+  if (emptyElement) {
+    emptyElement.innerText = "No News Item Saved 🗑️";
+    emptyElement.style.display = "block"
+  }
+}
 document.querySelector(".new-icon").addEventListener("click", () => {
   window.location.href = "../Newnews/newNews.html";
 });
-}else{
-  showNotification("No News Item Saved")
-}

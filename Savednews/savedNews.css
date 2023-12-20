@@ -1,5 +1,15 @@
 
-
+#empty{
+  font-size: 30px;
+  padding: 70px;
+  margin: 80px auto;
+  color: black;
+  background-color: #cca8e969;
+  width: fit-content;
+  text-align: center;
+  box-shadow: 2px 4px 8px black;
+  display: none;
+}
 /* savedNews */
 
 .alertMessage {
