@@ -47,8 +47,7 @@ const renderNews = (data) => {
                 <h2 id="new-author"><p>Category</p> ${category}</h2>
             </div>
             <div class = "newNews-content-url">
-                <p id="new-content">${content}</p>
-                <a id="new-url" href="${url}">Read More.</a>
+                <p id="new-content">${content} <a id="new-url" href="${url}">Read More.</a></p>
             </div>
             <i class="fa fav-icon fa-regular fa-heart fa-2xl transparent"></i>
           </div>
@@ -133,8 +132,8 @@ savedNewsList.map((news) => {
             <h2 id="saved-author"><p>Category</p> ${category}</h2>
           </div>
           <div class="savedNews-content-url">
-            <p id="saved-content">${content}</p>
-            <a id="saved-url" href="${url}">Read More.</a>
+            <p id="saved-content">${content} <a id="saved-url" href="${url}">Read More.</a></p>
+           
           </div>
           <i class="fas fa-times-circle xmark"></i>
         </div>
