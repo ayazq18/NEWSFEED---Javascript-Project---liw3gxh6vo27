@@ -1,4 +1,10 @@
-
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Popins", sans-serif;
+  scroll-behavior: smooth;
+}
 /* newNews */
 
 .newNews-section {
@@ -53,7 +59,7 @@
 .section-container {
   margin: 10px 10px;
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   justify-content: space-between;
   position: sticky;
   top: 0px;
@@ -62,10 +68,12 @@
 
 .newNews-content {
   background-color: #cca8e9;
-  margin: 10px auto;
+  border: none;
+  box-shadow: 0 0px 5px rgb(1, 17, 17);
+  margin: 15px auto;
   padding: 40px;
   position: relative;
-  width: 50vw;
+  width: 97vw;
 }
 
 .newAuthor-category {
@@ -97,6 +105,9 @@
   font-weight: 700;
   color: blue;
 }
+.newNews-content-url p {
+  font-size: 20px;
+}
 
 .fa-heart {
   font-size: 30px;
@@ -116,7 +127,7 @@
 }
 
 .floating-heading {
-  background-color: rgb(181, 224, 241);
+  background-color: rgb(221, 241, 181);
   margin: 0 10px;
   padding: 20px;
   position: sticky;
@@ -165,6 +176,7 @@
   margin-top: 10px;
   top: 130px;
   padding: 20px;
+  z-index: 1211;
 }
 .flop-save {
   font-size: 40px;
@@ -189,7 +201,7 @@
   background-color: #c3bef0;
   border: none;
   font-weight: 800;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .subCategory {
@@ -277,14 +289,16 @@
   }
 
   .newNews-heading a {
+    font-size: 15px;
     text-wrap: nowrap;
   }
   .newNews-heading h2 {
+    font-size: 15px;
     text-wrap: nowrap;
   }
 
   .newNews-content {
-    width: 83vw;
+    width: 95vw;
     margin: 5px;
     padding: 30px;
     margin: 10px auto;
@@ -293,7 +307,7 @@
   .subCategory button {
       padding: 10px;
       margin: 5px;
-      font-size: 10px;
+      font-size: 13px;
     }
 
   .category-container{
@@ -301,6 +315,14 @@
     z-index: 999;
     margin: 0;
     background-color: #3498db;
+  }
+
+  #category{
+    font-size: 15px;
+  }
+
+  .newNews-content-url p {
+    font-size: 15px;
   }
 
     .flop-save {
@@ -312,8 +334,9 @@
   }
 
   .fa-heart {
+    font-size: 20px;
     right: 10px;
-    bottom: 5px;
+    bottom: 10px;
   }
 
   #new-author {
@@ -337,15 +360,16 @@
     }
   
     .newNews-content {
-      width: 89vw;
-      margin: 10px;
+      width: 97vw;
+      margin: 10px auto;
       padding: 30px;
       margin: 10px auto;
     }
   
     .category-container {
-      width: 97.59%;
+      width: 98vw;
       padding: 10px;
+      margin: 5px auto;
       background-color: aquamarine;
       z-index: 999;
     }
@@ -353,7 +377,11 @@
     .subCategory button {
         padding: 10px;
         margin: 10px;
-        font-size: 10px;
+        font-size: 15px;
+      }
+
+      .newNews-content-url p {
+        font-size: 17px;
       }
 
       .flop-save {
@@ -361,7 +389,8 @@
       }
   
     .floating-heading {
-      top: 90px;
+      width: 98vw;
+      margin: 5px auto;
     }
   
     .fa-heart {

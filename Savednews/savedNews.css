@@ -1,3 +1,10 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Popins", sans-serif;
+  scroll-behavior: smooth;
+}
 
 #empty{
   font-size: 30px;
@@ -129,8 +136,9 @@
     background-color: #cca8e9;
     margin: 10px auto;
     padding: 40px;
+    box-shadow: 0 0px 5px rgb(1, 17, 17);
     position: relative;
-    width: 90vw;
+    width: 98vw;
   }
   
   .savedAuthor-category {
@@ -160,6 +168,7 @@
   }
   
   .savedNews-content-url a {
+    font-size: 15px;
     text-decoration: none;
     font-weight: 700;
     color: blue;
@@ -201,9 +210,9 @@
     }
   
     .savedNews-content {
-      width: 90vw;
+      width: 97vw;
       text-wrap: wrap;
-      margin: 5px;
+      margin: 5px auto;
       padding: 30px 20px;
     }
   
@@ -221,13 +230,15 @@
     }
   
     .savedNews-content-url a {
-      text-decoration: none;
-      font-weight: 700;
+      font-size: 13px;
       color: blue;
+    }
+    .savedNews-content-url p {
+      font-size: 15px;
     }
   
     .xmark {
-      font-size: 30px;
+      font-size: 25px;
       right: 10px;
       bottom: 10px;
       margin: 0 5px;
@@ -241,7 +252,7 @@
   
     .savedNews-sec a {
       text-wrap: nowrap;
-      font-size: 15px;
+      font-size: 20px;
     }
   
     .new-icon {
@@ -251,7 +262,7 @@
   
     .savedNews-sec h1 {
       text-wrap: nowrap;
-      font-size: 15px;
+      font-size: 20px;
     }
   
     .savedNews-content {
@@ -271,11 +282,16 @@
     }
   
     .savedNews-content-url a {
+      font-size: 14px;
       color: blue;
+    }
+
+    .savedNews-content-url p {
+      font-size: 17px;
     }
   
     .xmark {
-      font-size: 30px;
+      font-size: 27px;
       right: 10px;
       bottom: 10px;
       margin: 0 5px;
