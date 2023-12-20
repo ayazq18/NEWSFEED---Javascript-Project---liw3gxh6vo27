@@ -1,12 +1,14 @@
 
 #empty{
   font-size: 30px;
+  font-weight: 700;
   padding: 70px;
   margin: 80px auto;
   color: black;
-  background-color: #cca8e969;
+  background-color: rgb(192, 208, 255);
   width: fit-content;
   text-align: center;
+  border: 2px solid black;
   box-shadow: 2px 4px 8px black;
   display: none;
 }
