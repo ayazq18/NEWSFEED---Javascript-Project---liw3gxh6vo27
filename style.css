@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #defcf9;
+  background-color: #d4eddd;
 }
 .newsFeed-logo {
   text-transform: uppercase;
@@ -47,7 +47,7 @@ body {
   font-weight: 700;
   margin-bottom: 20px;
   padding: 10px 70px;
-  background-color: #cadefc;
+  background-color: rgb(221, 241, 181);
   text-align: center;
 }
 
@@ -86,7 +86,7 @@ body {
   text-decoration: none;
   color: black;
   padding: 10px 50px;
-  background-color: #c3bef0;
+  background-color: #bef0d0;
   border-radius: 10px;
   font-weight: 700;
   font-size: 20px;
