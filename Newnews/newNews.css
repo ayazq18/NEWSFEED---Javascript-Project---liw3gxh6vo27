@@ -163,7 +163,7 @@
     background-color: #c3bef058;
     position: sticky;
     margin-top: 10px;
-    top: 150px;
+    top: 130px;
   }
   .flop-save {
     font-size: 40px;
@@ -271,7 +271,7 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      gap: 100px;
+      gap: 20px;
     }
   
     .newNews-heading a {
@@ -282,27 +282,27 @@
     }
   
     .newNews-content {
-      width: 86.5%;
-      margin: 10px;
+      width: 83vw;
+      margin: 5px;
       padding: 30px;
       margin: 10px auto;
-    }
-  
-    .category-container {
-      width: 100%;
-      z-index: 999;
-      position: relative;
-      top: 20px;
     }
 
     .subCategory button {
         padding: 10px;
-        margin: 10px;
+        margin: 5px;
         font-size: 10px;
       }
 
+    .category-container{
+      padding: 5px;
+      z-index: 999;
+      margin: 0;
+      background-color: #3498db;
+    }
+
       .flop-save {
-        font-size: 30px;
+        font-size: 25px;
       }
   
     .floating-heading {
@@ -324,7 +324,7 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        gap: 100px;
+        gap: 20px;
       }
     
       .newNews-heading a {
@@ -335,7 +335,7 @@
       }
     
       .newNews-content {
-        width: 86.5%;
+        width: 89vw;
         margin: 10px;
         padding: 30px;
         margin: 10px auto;
@@ -343,9 +343,9 @@
     
       .category-container {
         width: 100%;
+        padding: 10px;
+        background-color: aquamarine;
         z-index: 999;
-        position: relative;
-        top: 20px;
       }
   
       .subCategory button {
