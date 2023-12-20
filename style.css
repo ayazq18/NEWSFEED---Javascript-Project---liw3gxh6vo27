@@ -292,8 +292,7 @@ body {
   background-color: #c3bef0;
   border: none;
   font-weight: 800;
-  font-size: 1.5vw;
-  cursor: pointer;
+  font-size: 20px;
 }
 
 .subCategory {
@@ -674,6 +673,10 @@ body {
 
   .select-category {
     gap: 10px;
+  }
+
+  #category {
+    font-size: 15px;
   }
 
   .category-container {
