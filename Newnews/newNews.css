@@ -1,0 +1,367 @@
+
+/* newNews */
+
+.newNews-section {
+    height: 300px;
+    overflow: auto;
+  }
+  
+  .newNews-sec {
+    background-image: url(../news.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10px;
+    padding: 30px;
+    position: sticky;
+    display: block;
+    left: 30px;
+    top: 0px;
+    z-index: 9;
+  }
+  
+  .newNews-heading a {
+    text-decoration: none;
+    color: black;
+    font-size: 2vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    background-color: #cadefc;
+    width: fit-content;
+    padding: 5px 20px;
+    margin: 10px;
+  }
+  
+  .newNews-heading {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  .newNews-heading h2 {
+    text-decoration: none;
+    color: white;
+    font-size: 2vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    background-color: rgb(147, 110, 200);
+    width: fit-content;
+    padding: 5px 20px;
+    margin: 10px;
+  }
+  
+  .section-container {
+    margin: 10px 10px;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    gap: 30px;
+  }
+  
+  .newNews-content {
+    background-color: #cca8e9;
+    margin: 10px auto;
+    padding: 40px;
+    position: relative;
+    width: 60rem;
+  }
+  
+  .newAuthor-category {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    bottom: 25px;
+  }
+  
+  #new-author {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  #new-author p {
+    font-weight: 400;
+  }
+  
+  .newNews-content-url {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+  
+  .newNews-content-url a {
+    text-decoration: none;
+    font-weight: 700;
+    color: blue;
+  }
+  
+  .fa-heart {
+    font-size: 30px;
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .transparent {
+    color: white;
+  }
+  
+  #newNews {
+    margin: 0px;
+  }
+  
+  .floating-heading {
+    background-color: rgb(181, 224, 241);
+    margin: 0 10px;
+    padding: 20px;
+    position: sticky;
+    top: 100px;
+    overflow: hidden;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+  }
+  
+  .floating-heading h2 {
+    font-size: 15px;
+    font-weight: 400;
+    color: red;
+    width: fit-content;
+    animation: floating-heading 10s linear infinite;
+    position: absolute;
+  }
+  
+  @keyframes floating-heading {
+    0% {
+      left: 100%;
+      text-wrap: nowrap;
+    }
+    100% {
+      left: 0%;
+      text-wrap: nowrap;
+    }
+  }
+  
+  .floating-heading a {
+    text-decoration: none;
+    font-weight: 600;
+    color: blue;
+  }
+  
+  /* category container */
+  
+  .category-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    background-color: #c3bef058;
+    position: sticky;
+    margin-top: 10px;
+    top: 150px;
+  }
+  .flop-save {
+    font-size: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: red;
+    cursor: pointer;
+  }
+  .flop-save:hover {
+    transform: scale(1.1);
+  }
+  
+  .select-category {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  #category {
+    padding: 5px 10px;
+    margin: 8px;
+    background-color: #c3bef0;
+    border: none;
+    font-weight: 800;
+    font-size: 20px;
+  }
+  
+  .subCategory {
+    width: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .subCategory button {
+    padding: 15px;
+    margin: 15px;
+    background-color: #c3bef0;
+    border: none;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(42, 36, 36, 0.921);
+    transition: box-shadow 1s ease;
+  }
+  
+  .subCategory button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(248, 245, 245, 0.921);
+  }
+  
+  #all {
+    background-color: chocolate;
+  }
+  #business {
+    background-color: yellow;
+  }
+  #sports {
+    background-color: green;
+  }
+  #india {
+    background-color: pink;
+  }
+  #hatke {
+    background-color: rgb(73, 73, 199);
+  }
+  #politics {
+    background-color: red;
+  }
+  #automobile {
+    background-color: darkgoldenrod;
+  }
+  #science {
+    background-color: fuchsia;
+  }
+  
+
+  /* NewNews */
+
+@media only screen and (max-width: 600px) {
+    .section-container {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 100px;
+    }
+  
+    .newNews-heading a {
+      text-wrap: nowrap;
+    }
+    .newNews-heading h2 {
+      text-wrap: nowrap;
+    }
+  
+    .newNews-content {
+      width: 86.5%;
+      margin: 10px;
+      padding: 30px;
+      margin: 10px auto;
+    }
+  
+    .category-container {
+      width: 100%;
+      z-index: 999;
+      position: relative;
+      top: 20px;
+    }
+
+    .subCategory button {
+        padding: 10px;
+        margin: 10px;
+        font-size: 10px;
+      }
+
+      .flop-save {
+        font-size: 30px;
+      }
+  
+    .floating-heading {
+      top: 90px;
+    }
+  
+    .fa-heart {
+      right: 10px;
+      bottom: 5px;
+    }
+
+    #new-author {
+        font-size: 15px;
+      }
+  }
+  
+  @media only screen and (min-width: 601px) and (max-width: 900px) {
+    .section-container {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 100px;
+      }
+    
+      .newNews-heading a {
+        text-wrap: nowrap;
+      }
+      .newNews-heading h2 {
+        text-wrap: nowrap;
+      }
+    
+      .newNews-content {
+        width: 86.5%;
+        margin: 10px;
+        padding: 30px;
+        margin: 10px auto;
+      }
+    
+      .category-container {
+        width: 100%;
+        z-index: 999;
+        position: relative;
+        top: 20px;
+      }
+  
+      .subCategory button {
+          padding: 10px;
+          margin: 10px;
+          font-size: 10px;
+        }
+  
+        .flop-save {
+          font-size: 30px;
+        }
+    
+      .floating-heading {
+        top: 90px;
+      }
+    
+      .fa-heart {
+        right: 10px;
+        bottom: 5px;
+      }
+    }
+
+    .loader {
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #3498db;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      margin-top: -25px;
+      margin-left: -25px;
+      display: none;
+  }
+  
+  @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+  }
