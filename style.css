@@ -20,7 +20,7 @@ body {
 }
 
 .newsFeed-logo h1 {
-  font-size: 7rem;
+  font-size: 80px;
   font-weight: 700;
   padding: 10px;
 }
@@ -53,7 +53,8 @@ body {
 
 #dashboard-feed-btns {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
   gap: 150px;
 }
 #dashboard-feed-btns button {
@@ -673,13 +674,11 @@ body {
 
   .select-category {
     gap: 10px;
-    /* justify-content: space-around; */
   }
 
   .category-container {
     width: 40%;
     text-wrap: nowrap;
-    /* margin: 20px; */
     padding: 10px;
   }
 
@@ -691,5 +690,79 @@ body {
   .fa-heart {
     right: 10px;
     bottom: 5px;
+  }
+}
+
+/*dashboard*/
+
+@media only screen and (max-width: 600px) {
+  .newsFeed-logo img {
+    width: 100px;
+  }
+
+  .newsFeed-logo h1 {
+    font-size: 30px;
+  }
+
+  .dashboard-feed-access h1 {
+    font-size: 30px;
+    text-wrap: nowrap;
+  }
+
+  #dashboard-feed-btns button {
+    padding: 10px 0px;
+    margin: 5px;
+    font-size: 10px;
+    text-wrap: nowrap;
+  }
+
+  #dashboard-feed-btns {
+    gap: 50px;
+  }
+
+  .floppy-load {
+    font-size: 15px;
+    margin: 0px 5px 0px 0px;
+  }
+
+  .newLoad-icon {
+    font-size: 15px;
+    margin: 0px 5px 0px 0px;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width:900px) {
+  .newsFeed-logo img {
+    width: 100px;
+  }
+
+  .newsFeed-logo h1 {
+    font-size: 50px;
+  }
+
+  .dashboard-feed-access h1 {
+    font-size: 30px;
+    text-wrap: nowrap;
+  }
+
+  #dashboard-feed-btns button {
+    padding: 10px 0px;
+    margin: 5px;
+    font-size: 20px;
+    text-wrap: nowrap;
+  }
+
+  #dashboard-feed-btns {
+    gap: 50px;
+  }
+
+  .floppy-load {
+    font-size: 20px;
+    margin: 0px 5px 0px 0px;
+  }
+
+  .newLoad-icon {
+    font-size: 20px;
+    margin: 0px 5px 0px 0px;
   }
 }
