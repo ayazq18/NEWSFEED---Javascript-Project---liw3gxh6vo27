@@ -128,11 +128,15 @@ body {
     text-wrap: nowrap;
   }
 
-  #dashboard-feed-btns button {
-    padding: 10px 0px;
+  #dashboard-feed-btns {
     margin: 5px;
-    font-size: 10px;
+    gap: 10px;
+  }
+  
+  #dashboard-feed-btns a {
     text-wrap: nowrap;
+    padding: 10px;
+    font-size: 13px;
   }
 
   #dashboard-feed-btns {
